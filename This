@@ -1,0 +1,115 @@
+import java.util.Scanner;
+
+class ClassA{
+	
+	int noOfStudents;
+	int noOfPresent;
+	int noOfAbsent;
+	String comments;
+	
+	 ClassA(){
+		
+		 this.noOfStudents = noOfStudents;
+		 this.noOfPresent = noOfPresent;
+		 this.noOfAbsent = noOfAbsent;
+		 
+	}
+	 void getDetails() {
+		 
+		 //this(); 
+		 System.out.println("CLASS A");
+		 System.out.println("enter no of students");
+		 Scanner students = new Scanner(System.in);
+		 noOfStudents= students.nextInt();
+		 System.out.println("enter no of students present");
+		 Scanner present = new Scanner(System.in);
+		 noOfPresent= present.nextInt();
+		 System.out.println("enter no of students absent");
+		 Scanner absent = new Scanner(System.in);
+		 noOfAbsent= absent.nextInt();
+	 }
+	 ClassA(String comments){
+		 
+		 this();
+		 this.comments= comments;
+		 this.getDetails();
+		 System.out.println("Comments");
+		 System.out.println(comments);
+		 detail(this);
+	 }
+	 void detail(ClassA obj) {
+		 
+		 System.out.println("Class details is found");
+		 System.out.println();
+	 }
+}
+class ClassB{
+	
+	ClassAll obj;
+	int noOfStudents;
+	int noOfPresent;
+	int noOfAbsent;
+	String comments;
+	
+	 ClassB(){
+	
+	 this.noOfStudents = noOfStudents;
+	 this.noOfPresent = noOfPresent;
+	 this.noOfAbsent = noOfAbsent;
+	 
+	 }
+     void getDetails() {
+	 
+	  
+    	 System.out.println("CLASS B");
+	 System.out.println("enter no of students");
+	 Scanner students = new Scanner(System.in);
+	 noOfStudents= students.nextInt();
+	 System.out.println("enter no of students present");
+	 Scanner present = new Scanner(System.in);
+	 noOfPresent= present.nextInt();
+	 System.out.println("enter no of students absent");
+	 Scanner absent = new Scanner(System.in);
+	 noOfAbsent= absent.nextInt();
+ }
+ ClassB(String comments){
+	 
+	 this();
+	 this.getDetails();
+ }
+  
+	 public ClassB(ClassAll classAll) {
+	
+		 this.obj = classAll;
+}
+	void display() {
+		 
+	 System.out.println("comments");
+	 System.out.println(obj.comments);
+	 System.out.println("Class details is found");
+ }
+}
+
+public class ClassAll {
+	
+	String comments = "Very good";
+	
+	ClassAll(){
+		
+		ClassB B = new ClassB(this);
+		B.display();
+	}
+
+	public static void main(String[] args) {
+		
+		ClassA objA = new ClassA("Great");
+		
+		ClassB objectB = new ClassB();
+		objectB.getDetails();
+	
+		ClassAll object = new ClassAll();
+		
+			
+		}
+	
+	}
