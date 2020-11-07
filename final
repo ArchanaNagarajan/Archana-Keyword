@@ -1,0 +1,33 @@
+final class bike{ 
+	   
+	final int wheel= 2 ;
+	 String color= "Black";
+	int speed = 110 ;
+    
+    public final void speed() { 
+       
+    	if(speed>100) {
+    		
+    		System.out.println("OverSpeed");
+    	}else
+    	{
+    		System.out.println("normal speed");
+    	}
+    } 
+  
+    public static void main(String[] args) 
+    { 
+  
+    	bike b1 = new bike();
+    	//b1.wheel=6; error
+    	int wheels = b1.wheel;
+    	wheels++;
+    	System.out.println("before: "+ b1.wheel);
+    	System.out.println("Wheel : "+ wheels);
+    	b1.color = "green";
+    	System.out.println("color : " + b1.color);
+    	System.out.println("Speed : "+b1.speed);
+    	b1.speed();
+    	
+    } 
+} 
